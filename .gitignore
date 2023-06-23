@@ -1,5 +1,6 @@
 .vs/
 grid/.vs
+grid/x64/
 
 *.sln
 *.vcxproj.filters
