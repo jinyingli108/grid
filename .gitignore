@@ -1,5 +1,6 @@
 .vs/
 grid/.vs
 
+*.sln
 *.vcxproj.filters
 *.vcxproj.user
