@@ -5,9 +5,9 @@
 
 namespace grid
 {
-	/*
-	* A point expressed in axial coordinates.
-	*/
+	/**
+	 * A point expressed in axial coordinates..
+	 */
 	struct AxialPoint
 	{
 		std::int32_t q;
