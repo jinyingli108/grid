@@ -6,7 +6,7 @@
 namespace grid
 {
 	/**
-	 * A point expressed in axial coordinates..
+	 * A point expressed in axial coordinates.
 	 */
 	struct AxialPoint
 	{
@@ -46,7 +46,12 @@ namespace grid
 			swap(lhs.r, rhs.r);
 		}
 
-		std::int32_t getS() const
+		/**
+		 * Get the s-coordinate.
+		 * 
+		 * @return The s-coordinate.
+		 */
+		constexpr std::int32_t getS() const
 		{
 			return -q - r;
 		}
