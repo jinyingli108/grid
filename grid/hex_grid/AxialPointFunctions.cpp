@@ -3,7 +3,7 @@
 
 #include "AxialPoint.h"
 
-namespace grid::hex
+namespace
 {
 	std::size_t getNeighborCount(std::int32_t range)
 	{
@@ -12,9 +12,12 @@ namespace grid::hex
 		* Thus, the total number of neighbors that are within N units is 6 * summation(1 to N),
 		* which simplifies to [3 * N * (N + 1)].
 		*/
-		return std::size_t{3} * range * (range + 1);
+		return std::size_t{3} *range * (range + 1);
 	}
+}
 
+namespace grid::hex
+{
 	std::vector<AxialPoint> getNeighbors(AxialPoint const & origin, std::int32_t range)
 	{
 		std::int32_t n = std::abs(range);
