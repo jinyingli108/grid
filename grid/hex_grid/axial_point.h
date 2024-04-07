@@ -8,38 +8,38 @@ namespace grid
 	/**
 	 * A point expressed in axial coordinates.
 	 */
-	struct AxialPoint
+	struct axial_point
 	{
 		std::int32_t q;
 		std::int32_t r;
 
-		constexpr AxialPoint & operator+=(AxialPoint const & rhs)
+		constexpr axial_point & operator+=(axial_point const & rhs)
 		{
 			this->q += rhs.q;
 			this->r += rhs.r;
 			return *this;
 		}
 
-		constexpr AxialPoint & operator-=(AxialPoint const & rhs)
+		constexpr axial_point & operator-=(axial_point const & rhs)
 		{
 			this->q -= rhs.q;
 			this->r -= rhs.r;
 			return *this;
 		}
 
-		friend constexpr AxialPoint operator+(AxialPoint lhs, AxialPoint const & rhs)
+		friend constexpr axial_point operator+(axial_point lhs, axial_point const & rhs)
 		{
 			lhs += rhs;
 			return lhs;
 		}
 
-		friend constexpr AxialPoint operator-(AxialPoint lhs, AxialPoint const & rhs)
+		friend constexpr axial_point operator-(axial_point lhs, axial_point const & rhs)
 		{
 			lhs -= rhs;
 			return lhs;
 		}
 
-		friend constexpr void swap(AxialPoint & lhs, AxialPoint & rhs)
+		friend constexpr void swap(axial_point & lhs, axial_point & rhs)
 		{
 			using std::swap;
 			swap(lhs.q, rhs.q);
@@ -51,7 +51,7 @@ namespace grid
 		 * 
 		 * @return The s-coordinate.
 		 */
-		constexpr std::int32_t getS() const
+		constexpr std::int32_t get_s() const
 		{
 			return -q - r;
 		}
