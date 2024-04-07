@@ -3,7 +3,7 @@
 #include <cstdint>
 #include <vector>
 
-struct AxialPoint;
+struct axial_point;
 
 namespace grid::hex
 {
@@ -14,7 +14,7 @@ namespace grid::hex
 	 * @param[in] range Enclosing distance toRange of neighbors
 	 * @return The neighboring points within range of the origin point. 
 	 */
-	std::vector<AxialPoint> getNeighbors(AxialPoint const & origin, std::int32_t range);
+	std::vector<axial_point> get_neighbors(axial_point const & origin, std::int32_t range);
 
 	/**
 	 * Get the distance between 2 points.
@@ -23,5 +23,5 @@ namespace grid::hex
 	 * @param[in] b Second point.
 	 * @return The distance between the points.
 	 */
-	std::uint32_t getDistance(AxialPoint const & a, AxialPoint const & b);
+	std::uint32_t getDistance(axial_point const & a, axial_point const & b);
 }
