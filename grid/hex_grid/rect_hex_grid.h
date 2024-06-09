@@ -11,7 +11,7 @@
 namespace grid::hex
 {
 	/**
-	 * Rectagular, horizontal hex grid.
+	 * Rectagular hex grid which uses a horizontal (i.e. flat-top) orientation.
 	 */
 	template<typename Tile>
 	class rect_hex_grid
