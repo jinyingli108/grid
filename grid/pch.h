@@ -7,6 +7,8 @@
 #pragma once
 
 #include <cmath>
-#include <cstddef>
 #include <cstdint>
+#include <cstdlib>
+#include <stdexcept>
+#include <utility>
 #include <vector>
