@@ -93,8 +93,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="common\point.h" />
     <ClInclude Include="hex_grid\axial_point_fn.h" />
     <ClInclude Include="hex_grid\axial_point.h" />
+    <ClInclude Include="hex_grid\hex_offset_type.h" />
+    <ClInclude Include="hex_grid\hex_point_fn.h" />
+    <ClInclude Include="hex_grid\rect_hex_grid.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
