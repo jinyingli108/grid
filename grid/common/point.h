@@ -12,5 +12,5 @@ namespace grid::common
 		Numeric y;
 	};
 
-	using offset_point = point_2d<std::int32_t>;
+	using offset_point = point_2d<std::int64_t>;
 }

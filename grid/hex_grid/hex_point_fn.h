@@ -29,32 +29,32 @@ namespace grid::hex
 	template<>
 	constexpr common::offset_point to_offset_point<hex_offset_type::even_offset>(axial_point const & point)
 	{
-		std::int32_t x = point.q + (point.r + (point.r & 1)) / 2;
-		std::int32_t y = point.r;
+		std::int64_t x = point.q + (point.r + (point.r & 1)) / 2;
+		std::int64_t y = point.r;
 		return common::offset_point{x, y};
 	}
 
 	template<>
 	constexpr common::offset_point to_offset_point<hex_offset_type::odd_offset>(axial_point const & point)
 	{
-		std::int32_t x = point.q + (point.r - (point.r & 1)) / 2;
-		std::int32_t y = point.r;
+		std::int64_t x = point.q + (point.r - (point.r & 1)) / 2;
+		std::int64_t y = point.r;
 		return common::offset_point{x, y};
 	}
 
 	template<>
 	constexpr axial_point to_axial_point<hex_offset_type::even_offset>(common::offset_point const & point)
 	{
-		std::int32_t q = point.x - (point.y + (point.y & 1)) / 2;
-		std::int32_t r = point.y;
+		std::int64_t q = point.x - (point.y + (point.y & 1)) / 2;
+		std::int64_t r = point.y;
 		return axial_point{q, r};
 	}
 
 	template<>
 	constexpr axial_point to_axial_point<hex_offset_type::odd_offset>(common::offset_point const & point)
 	{
-		std::int32_t q = point.x - (point.y - (point.y & 1)) / 2;
-		std::int32_t r = point.y;
+		std::int64_t q = point.x - (point.y - (point.y & 1)) / 2;
+		std::int64_t r = point.y;
 		return axial_point{q, r};
 	}
 }
