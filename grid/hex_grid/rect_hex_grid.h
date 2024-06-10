@@ -24,7 +24,9 @@ namespace grid::hex
 		constexpr explicit rect_hex_grid(std::vector<tile_type> && tiles, std::uint64_t width) :
 			tiles(std::move(tiles))
 		{
-			std::lldiv_t div_result = std::div(this->tiles.size(), width);
+			std::lldiv_t div_result = std::div(
+				static_cast<std::int64_t>(this->tiles.size()), static_cast<std::int64_t>(width)
+			);
 
 			if (!div_result.rem)
 			{
@@ -32,7 +34,7 @@ namespace grid::hex
 			}
 
 			this->width = width;
-			this->height = div_result.quot;
+			this->height = static_cast<std::uint64_t>(div_result.quot);
 		}
 
 		constexpr rect_hex_grid(rect_hex_grid const & other) :
