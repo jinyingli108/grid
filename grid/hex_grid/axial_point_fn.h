@@ -23,5 +23,5 @@ namespace grid::hex
 	 * @param[in] b Second point.
 	 * @return The distance between the points.
 	 */
-	std::uint64_t getDistance(axial_point const & a, axial_point const & b);
+	std::uint64_t get_distance(axial_point const & a, axial_point const & b);
 }

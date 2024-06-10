@@ -34,7 +34,7 @@ namespace grid::hex
 		}
 	}
 
-	std::uint64_t getDistance(axial_point const & a, axial_point const & b)
+	std::uint64_t get_distance(axial_point const & a, axial_point const & b)
 	{
 		axial_point delta = a - b;
 		return static_cast<uint64_t>(std::abs(delta.q) + std::abs(delta.r) + std::abs(delta.q + delta.r)) / 2;
