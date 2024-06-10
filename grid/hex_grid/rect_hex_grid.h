@@ -19,9 +19,9 @@ namespace grid::hex
 	public:
 		using tile_type = Tile;
 		using const_tile_type = Tile const;
-		using index_type = common::point_2d<std::uint32_t>;
+		using index_type = common::point_2d<std::uint64_t>;
 
-		constexpr explicit rect_hex_grid(std::vector<tile_type> && tiles, std::uint32_t width) :
+		constexpr explicit rect_hex_grid(std::vector<tile_type> && tiles, std::uint64_t width) :
 			tiles(std::move(tiles))
 		{
 			std::lldiv_t div_result = std::div(this->tiles.size(), width);
@@ -86,12 +86,12 @@ namespace grid::hex
 			return const_cast<tile_type &>(const_cast<rect_hex_grid<tile_type> const *>(this)->get(index));
 		}
 
-		constexpr std::uint32_t get_width() const
+		constexpr std::uint64_t get_width() const
 		{
 			return this->width;
 		}
 
-		constexpr std::uint32_t get_height() const
+		constexpr std::uint64_t get_height() const
 		{
 			return this->height;
 		}
@@ -106,7 +106,7 @@ namespace grid::hex
 
 	private:
 		std::vector<tile_type> tiles;
-		std::uint32_t width;
-		std::uint32_t height;
+		std::uint64_t width;
+		std::uint64_t height;
 	};
 }
