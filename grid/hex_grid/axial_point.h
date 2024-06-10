@@ -10,8 +10,8 @@ namespace grid
 	 */
 	struct axial_point
 	{
-		std::int32_t q;
-		std::int32_t r;
+		std::int64_t q;
+		std::int64_t r;
 
 		constexpr axial_point & operator+=(axial_point const & rhs)
 		{
@@ -51,7 +51,7 @@ namespace grid
 		 * 
 		 * @return The s-coordinate.
 		 */
-		constexpr std::int32_t get_s() const
+		constexpr std::int64_t get_s() const
 		{
 			return -q - r;
 		}
