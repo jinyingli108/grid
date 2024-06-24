@@ -1,6 +1,5 @@
 .vs/
-grid/.vs
-grid/x64/
+out/
 
 *.vcxproj.filters
 *.vcxproj.user
