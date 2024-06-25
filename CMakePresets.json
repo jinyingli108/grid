@@ -8,9 +8,7 @@
     "configurePresets": [
         {
             "name": "base",
-            "hidden": true,
-            "binaryDir": "${sourceDir}/out/build/${presetName}",
-            "installDir": "${sourceDir}/out/install/${presetName}"
+            "hidden": true
         },
         {
             "name": "windows-base",
