@@ -31,6 +31,8 @@ namespace grid::hex
 				neighbors.emplace_back(origin.q + dq, origin.r + dr);
 			}
 		}
+
+		return neighbors;
 	}
 
 	std::uint64_t get_distance(axial_point const & a, axial_point const & b)
